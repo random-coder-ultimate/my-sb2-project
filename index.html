@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Tosh Project</title>
+<style>
+  body { font-family: sans-serif; text-align: center; margin-top: 50px; background: #f4f4f4; }
+  input { padding: 8px; font-size: 16px; width: 250px; }
+  button { padding: 8px 16px; font-size: 16px; margin-left: 10px; cursor: pointer; }
+  #downloadLink { display: none; margin-top: 20px; }
+  .container { background: white; padding: 30px; border-radius: 10px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Download Tosh Project</h2>
+<p>Enter your email to access the download link (optional):</p>
+
+<input type="email" id="email" placeholder="you@example.com">
+<button onclick="showLink()">Submit</button>
+
+<div id="downloadLink">
+  <p>Thanks! Download your project below:</p>
+  <a id="link" href="tosh.sb2" download="tosh.sb2">Download tosh.sb2</a>
+  <p style="font-size: 12px; color: gray;">If the file opens in your browser, right-click the link and choose “Save link as…”</p>
+</div>
+</div>
+
+<script>
+function showLink() {
+    const email = document.getElementById('email').value.trim();
+    if(email) {
+        console.log('Email entered:', email); // Optional: just for your reference in console
+    }
+    // Show the download link
+    document.getElementById('downloadLink').style.display = 'block';
+    // Clear input
+    document.getElementById('email').value = '';
+}
+</script>
+
+</body>
+</html>
